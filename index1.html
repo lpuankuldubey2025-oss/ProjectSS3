@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankul Dubey | Premium Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --text:#fff;
+  --card:#1e293b;
+  --primary:#38bdf8;
+}
+
+body.light{
+  --bg:#f1f5f9;
+  --text:#000;
+  --card:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);transition:0.3s;}
+
+header{
+  position:fixed;width:100%;top:0;
+  display:flex;justify-content:space-between;
+  padding:20px 50px;background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);z-index:1000;
+}
+
+nav a{margin-left:20px;text-decoration:none;color:var(--text);} 
+
+.toggle{cursor:pointer;font-size:20px;}
+
+section{padding:100px 20px;text-align:center;}
+
+.hero{
+  height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') no-repeat center/cover;
+}
+
+.hero img{
+  width:120px;height:120px;border-radius:50%;margin-bottom:20px;
+  border:3px solid var(--primary);
+}
+
+.btn{padding:12px 25px;background:var(--primary);color:black;border-radius:20px;text-decoration:none;}
+
+.skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin-top:30px;}
+
+.skill-box {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.08);
+  background: #38bdf8;
+  color: black;
+}
+
+.skill-box.active {
+  background: #38bdf8;
+  color: black;
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* Show index number */
+.skill-box::after {
+  content: attr(data-index);
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.progress{background:#555;border-radius:10px;margin-top:10px;}
+.progress div{height:8px;background:var(--primary);border-radius:10px;}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:var(--card);padding:20px;border-radius:10px;}
+
+form{display:flex;flex-direction:column;gap:10px;max-width:400px;margin:auto;}
+input,textarea{padding:10px;border:none;border-radius:5px;}
+button{padding:10px;background:var(--primary);border:none;cursor:pointer;}
+
+.reveal{opacity:0;transform:translateY(50px);transition:1s;}
+.reveal.active{opacity:1;transform:translateY(0);} 
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Ankul Dubey</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="toggle" onclick="toggleMode()">🌙</div>
+</header>
+
+<section class="hero">
+  <img src="whar1111.jpg" alt="Ankul Dubey">
+  <h2>Hello, I'm Ankul Dubey 👋</h2>
+  <p>Web Developer | UI/UX Designer</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about" class="reveal">
+  <h2>About</h2>
+<p>
+Hello, I'm Ankul Dubey, a passionate Web Developer who enjoys building modern, responsive, and user-friendly websites. I focus on creating clean designs that deliver a smooth and engaging user experience.
+I specialize in frontend and backend development, working with technologies like HTML, CSS, JavaScript, Node.js, and MongoDB. I aim to build websites that are both visually appealing and technically strong.
+I believe that great design and performance go hand in hand. My goal is to create fast, optimized, and scalable web applications that work seamlessly across all devices.
+I enjoy solving real-world problems through code and continuously improving my skills by learning new tools and technologies. Every project I build helps me grow as a developer.
+I pay attention to detail and focus on writing clean, maintainable code. I also have a strong interest in UI/UX design, ensuring that users get the best possible experience.
+I am always open to new opportunities and challenges where I can contribute, learn, and grow. My aim is to become a highly skilled full stack developer and work on impactful projects.
+</p>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="skills-container">
+
+    <div class="skill-box">
+      <i class="fab fa-python"></i>
+      <p>Python</p>
+      <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-box">
+      <i class="fab fa-java"></i>
+      <p>Java</p>
+      <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill-box">
+      <i class="fab fa-css3-alt"></i>
+      <p>CSS</p>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill-box">
+      <i class="fab fa-node-js"></i>
+      <p>Node.js</p>
+      <div class="progress"><div style="width:75%"></div></div>
+    </div>
+
+    <div class="skill-box">
+      <i class="fas fa-database"></i>
+      <p>MongoDB</p>
+      <div class="progress"><div style="width:70%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<<section id="projects" class="reveal">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3><i class="fas fa-robot"></i> AI Chatbot Assistant</h3>
+      <p>Intelligent chatbot with real-time responses and modern UI.</p>
+      <p><b>Tools:</b> HTML, CSS, JavaScript, API</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-shopping-cart"></i> E-Commerce Platform</h3>
+      <p>Full-stack shopping app with authentication, cart & payment system.</p>
+      <p><b>Tools:</b> Node.js, MongoDB, Express, React</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-seedling"></i> Smart Irrigation System</h3>
+      <p>IoT-based automatic watering system using soil moisture sensors.</p>
+      <p><b>Tools:</b> Arduino, Sensors, C++</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-tasks"></i> Task Manager App</h3>
+      <p>CRUD application with login system to manage daily tasks.</p>
+      <p><b>Tools:</b> JavaScript, Node.js, MongoDB</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-cloud-sun"></i> Weather Forecast App</h3>
+      <p>Real-time weather updates using API with dynamic UI.</p>
+      <p><b>Tools:</b> JavaScript, API, CSS</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-globe"></i> Portfolio Website</h3>
+      <p>Personal animated portfolio showcasing projects and skills.</p>
+      <p><b>Tools:</b> HTML, CSS, JavaScript</p>
+    </div>
+
+  </div>
+</section>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Ankul Dubey</p>
+</footer>
+
+<script>
+function toggleMode(){document.body.classList.toggle('light');}
+
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
